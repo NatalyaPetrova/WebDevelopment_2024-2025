@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Карта изображений Фрукты и Овощи</title>
+</head>
+<body bgcolor="#ffffff" text="#000000">
+
+  <p align="center">
+    <font face="Arial" size="12">Карта изображений фрукты и овощи</font>
+	
+  </p>
+  
+  <p id="message" style="text-align:center; font-size:40px; color:black; margin-top:20px;"></p>
+  <audio id="fruitSound" src="Антошка.mp3"></audio>
+
+
+  <div align="center">
+    <img src="fruit.jpg" alt="Фрукты и овощи" usemap="#fruitmap">
+  </div>
+  
+<div id="video" style="display: none; text-align: center; margin-top: 20px;">
+  <video id="videoPlayer" width="320" height="240" controls>
+    <source src="test.mp4" type="video/mp4">
+  </video>
+</div>
+
+  <map name="fruitmap">
+    <area shape="circle" coords="333,138,65" href="https://ru.pinterest.com/pin/343681015291154633/" alt="Апельсин" title="Апельсин">
+	<area shape="poly" coords="70,57,89,58,127,164,103,202,67,210,34,192,19,168,23,140,47,108,61,80,71,54" href="https://ru.wikipedia.org/wiki/%D0%93%D1%80%D1%83%D1%88%D0%B0" alt="Груша" title="Груша">
+	<area shape="rect" coords="257,658,411,744" alt="Картошка" title="Картошка" onclick="document.getElementById('fruitSound').play(); document.getElementById('message').innerText = 'Это картошка! Знакомая песенка?'; document.body.bgColor = '#B3876E'"> 
+	<area shape="poly" coords="671,292,697,312,669,343,675,352,664,383,599,441,575,465,544,490,526,499,522,500,539,472,542,458,559,437,585,402,601,377,627,341,645,329,653,331,667,292" alt="Морковь" title="Морковь" onclick="document.getElementById('message').innerText = 'Это Морковка'; document.body.bgColor = '#FFA125'">
+	<area shape="circle" coords="61,681,39" alt="Редис" title="Редиска" onclick="document.querySelector('img').style.display = 'none'; document.body.bgColor = '#FF89E4'; document.getElementById('message').innerText = 'Это была редиска'">
+	<area shape="circle" coords="80,417,74" alt="Капуста" title="Капуста" onclick="document.body.bgColor = '#DCFFAE'; document.getElementById('message').innerText = 'Это Капуста'">
+	<area shape="circle" coords="336,446,45" alt="Лук" title="Лук" onclick="document.body.bgColor = '#AEFFC6'; document.getElementById('message').innerText = 'Это лук'">
+	<area shape="poly" coords="693,47,696,70,697,86,693,97,686,119,649,165,603,190,552,205,531,202,531,194,554,171,587,150,622,125,644,98,656,78,691,44" alt="Банан" title="Банан" onclick="document.getElementById('video').style.display = 'block'; document.getElementById('videoPlayer').muted = true; document.getElementById('videoPlayer').play();document.getElementById('videoPlayer').requestFullscreen()">
+	<area shape="circle" coords="893,157,61" alt="Мандарин" title="Мандарин" onclick="document.body.bgColor = '#FFA200'; document.getElementById('message').innerText = 'Это Мандарин'">
+	<area shape="poly" coords="939,618,950,632,944,657,880,716,856,750,824,755,818,738,843,679,883,637,929,613,940,616" alt="Огурец" title="Огурец" onclick="document.getElementById('message').innerText = 'Молодец! Это огурец'; document.body.bgColor = '#7CFF77'">
+	<area shape="poly" coords="878,317,927,317,957,342,967,361,921,338,872,336,859,342,860,343,864,346,882,342,913,356,927,381,925,439,884,484,824,475,799,440,795,405,809,365,832,348,861,341,868,330,877,314,888,313,888,318" alt="Персик" title="Персик" onclick="document.getElementById('message').innerText = 'Это персик'; document.body.bgColor = '#FF9E8B'">
+	<area shape="circle" coords="636,695,68" alt="Яблоко" title="Яблоко" href="https://ru.wikipedia.org/wiki/%D0%AF%D0%B1%D0%BB%D0%BE%D0%BD%D1%8F" onclick="document.body.bgColor = '#DAF626'; document.getElementById('message').innerText = 'Это Яблоко'">
+ </map>
+ 
+</body>
+</html>
